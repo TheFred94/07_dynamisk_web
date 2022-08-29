@@ -1,0 +1,7 @@
+img {
+  max-width: 200px;
+  max-height: 200px;
+  border-color: black;
+  border: solid;
+  cursor: pointer;
+}
