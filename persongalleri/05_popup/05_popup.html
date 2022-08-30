@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Alle</h1>
+    </header>
+    <nav>
+      <button data-troende="alle" class="valgt">Alle</button>
+      <button data-troende="ja">Troende</button>
+      <button data-troende="nej">Ikke troende</button>
+      <button data-troende="tvivler">Tvivler</button>
+    </nav>
+    <main></main>
+    <template>
+      <article>
+        <img src="" alt="" class="billede" />
+        <h2 class="navn"></h2>
+        <p class="email"></p>
+        <p class="troende"></p>
+      </article>
+    </template>
+    <section id="popup">
+      <div id="luk">&#x2715</div>
+      <article>
+        <h2></h2>
+        <img src="" alt="" />
+        <h3>Titel: <span class="titel"></span></h3>
+        <p>Email: <span class="email"></span></p>
+        <p>Fødselsdag: <span class="fdag"></span></p>
+        <p>Hobby: <span class="hobby"></span></p>
+        <p>Troende: <span class="tro"></span></p>
+      </article>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
