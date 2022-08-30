@@ -19,9 +19,9 @@ function vis(json) {
   json.forEach((person) => {
     const klon = template.cloneNode(true);
     klon.querySelector(".billede").src = "faces/" + person.billede;
-    klon.querySelector(".navn").textContent = person.fornavn;
-    klon.querySelector(".efternavn").textContent = person.efternavn;
-    klon.querySelector(".fødselsdag").textContent = person.fødselsdag;
+    klon.querySelector(".navn").textContent = person.fornavn + " " + person.efternavn;
+    klon.querySelector(".email").textContent = person.email;
+    klon.querySelector(".troende").textContent = person.troende;
     main.appendChild(klon);
   });
 }
