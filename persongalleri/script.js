@@ -5,13 +5,24 @@ const options = {
   },
 };
 
+const main = document.querySelector("main");
+
 async function hentData() {
-  const resspons = await fetch(url, options);
-  const json = await resspons.json();
+  const respons = await fetch(url, options);
+  const json = await respons.json();
   vis(json);
 }
 
 function vis(json) {
   console.log(json);
+  const template = document.querySelector("template").content;
+  json.forEach((person) => {
+    const klon = template.cloneNode(true);
+    klon.querySelector(".billede").src = "faces/" + person.billede;
+    klon.querySelector(".navn").textContent = person.navn;
+    klon.querySelector(".titel").textContent = person.titel;
+    klon.querySelector(".fødselsdag").textContent = person.fødselsdag;
+    main.appendChild(klon);
+  });
 }
 hentData();
