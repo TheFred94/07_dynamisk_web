@@ -1,5 +1,6 @@
 let personer;
 let filter = "alle";
+
 const header = document.querySelector("h1");
 const url = "https://persongalleri-5d3e.restdb.io/rest/persongalleri";
 const options = {
@@ -10,6 +11,7 @@ const options = {
 
 const filterBtn = document.querySelectorAll("nav button");
 filterBtn.forEach((button) => button.addEventListener("click", filtrerPersoner));
+document.querySelector("#luk").addEventListener("click", () => (popup.style.display = "none"));
 
 function filtrerPersoner() {
   filter = this.dataset.troende;
@@ -39,8 +41,21 @@ function vis() {
       klon.querySelector(".navn").textContent = person.fornavn + " " + person.efternavn;
       klon.querySelector(".email").textContent = person.email;
       klon.querySelector(".troende").textContent = person.troende;
+      klon.querySelector("article").addEventListener("click", () => visDetaljer(person));
       main.appendChild(klon);
     }
   });
 }
+function visDetaljer(person) {
+  console.log(person);
+  popup.style.display = "block";
+  document.querySelector(".popimg").src = "../faces/" + person.billede;
+  document.querySelector(".popupnavn").textContent = person.fornavn + " " + person.efternavn;
+  document.querySelector(".titel").textContent = person.titel;
+  document.querySelector(".email").textContent = person.email;
+  document.querySelector(".fdag").textContent = person.fødselsdag;
+  document.querySelector(".hobby").textContent = person.hobby;
+  document.querySelector(".tro").textContent = person.troende;
+}
+
 hentData();
