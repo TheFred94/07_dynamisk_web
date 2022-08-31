@@ -1,5 +1,6 @@
 let personer;
 let filter = "alle";
+
 const header = document.querySelector("h1");
 const url = "https://persongalleri-5d3e.restdb.io/rest/persongalleri";
 const options = {
@@ -39,15 +40,14 @@ function vis() {
       klon.querySelector(".navn").textContent = person.fornavn + " " + person.efternavn;
       klon.querySelector(".email").textContent = person.email;
       klon.querySelector(".troende").textContent = person.troende;
-      klon.querySelector("article").addEventListener("click", () => {
-        visDetaljer(person);
-      });
+      klon.querySelector("article").addEventListener("click", () => visDetaljer(person));
       main.appendChild(klon);
     }
   });
 }
-
 function visDetaljer(person) {
-  location.href = `personliste-singleview.html?id=${person._id}`;
+  console.log(person._id);
+  window.location.href = `singleview.html?id=${person._id}`;
 }
+
 hentData();

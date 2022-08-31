@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <article>
+      <h2 class="popupnavn"></h2>
+      <img class="popimg" src="" alt="" />
+      <h3>Titel: <span class="titel"></span></h3>
+      <p>Email: <span class="email"></span></p>
+      <p>Fødselsdag: <span class="fdag"></span></p>
+      <p>Hobby: <span class="hobby"></span></p>
+      <p>Troende: <span class="tro"></span></p>
+    </article>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get("id");
+      console.log(id);
+      let person;
+
+      const url = `https://persongalleri-5d3e.restdb.io/rest/persongalleri/${id}`;
+      const key = "600fe9211346a1524ff12e31";
+
+      async function hentData() {
+        console.log("hentData");
+        const respons = await fetch(url, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            "x-apikey": key,
+          },
+        });
+        person = await respons.json();
+        console.log({ person });
+        visPerson();
+      }
+
+      function visPerson() {
+        console.log(person);
+
+        document.querySelector(".popimg").src = "../faces/" + person.billede;
+        document.querySelector(".popupnavn").textContent = person.fornavn + " " + person.efternavn;
+        document.querySelector(".titel").textContent = person.titel;
+        document.querySelector(".email").textContent = person.email;
+        document.querySelector(".fdag").textContent = person.fødselsdag;
+        document.querySelector(".hobby").textContent = person.hobby;
+        document.querySelector(".tro").textContent = person.troende;
+      }
+
+      hentData();
+    </script>
+  </body>
+</html>

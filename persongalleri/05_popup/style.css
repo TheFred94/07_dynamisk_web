@@ -2,7 +2,6 @@ img {
   max-width: 100%;
   border-top: 4px;
 }
-
 article {
   border: solid blanchedalmond;
   border-radius: 6px;
@@ -18,7 +17,7 @@ main {
   border-radius: 6px;
 }
 
-#popup {
+.popup {
   display: none;
   position: fixed;
   left: 0;
@@ -29,7 +28,7 @@ main {
   overflow: scroll;
 }
 
-#popup article {
+.popup article {
   width: 80wv;
   display: flex;
   align-items: center;
@@ -41,8 +40,8 @@ main {
   background-color: white;
 }
 
-#luk {
-  postion: fixed;
+.luk {
+  position: fixed;
   padding: 1rem;
   font-size: 1.7rem;
   font-weight: bolder;
