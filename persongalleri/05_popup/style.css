@@ -17,7 +17,7 @@ main {
   border-radius: 6px;
 }
 
-.popup {
+#popup {
   display: none;
   position: fixed;
   left: 0;
@@ -28,7 +28,7 @@ main {
   overflow: scroll;
 }
 
-.popup article {
+#popup article {
   width: 80wv;
   display: flex;
   align-items: center;
@@ -40,11 +40,17 @@ main {
   background-color: white;
 }
 
-.luk {
+#luk {
   position: fixed;
   padding: 1rem;
   font-size: 1.7rem;
   font-weight: bolder;
   color: white;
   cursor: pointer;
+}
+
+.popimg {
+  width: 50%;
+  object-fit: contain;
+  align-self: center;
 }
