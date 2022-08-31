@@ -40,3 +40,9 @@ main {
   padding: 12px;
   background-color: white;
 }
+
+.popimg {
+  width: 50%;
+  object-fit: contain;
+  align-self: center;
+}
