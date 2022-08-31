@@ -8,6 +8,7 @@
     <title>Document</title>
   </head>
   <body>
+    <button class="tilbage">Tilbage</button>
     <article>
       <h2 class="popupnavn"></h2>
       <img class="popimg" src="" alt="" />
@@ -51,6 +52,12 @@
         document.querySelector(".fdag").textContent = person.fødselsdag;
         document.querySelector(".hobby").textContent = person.hobby;
         document.querySelector(".tro").textContent = person.troende;
+
+        document.querySelector(".tilbage").addEventListener("click", goBack);
+      }
+
+      function goBack() {
+        history.back();
       }
 
       hentData();
