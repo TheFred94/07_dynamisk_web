@@ -67,6 +67,8 @@ article:hover #loopview_img {
 }
 
 article {
+  box-shadow: 5px 5px;
+  box-shadow: 1px 1px 0 0 black, 2px 2px 0 0 black, 3px 3px 0 0 black, 4px 4px 0 0 black, 5px 5px 0 0 black, 6px 6px 0 0 black;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -90,37 +92,42 @@ nav {
   display: flex;
   justify-content: space-evenly;
   margin-block: 2rem;
+  padding-block: 1rem;
 }
 
 .valgt {
   background-color: var(--knap_valgt_farve);
+  box-shadow: 1px 1px 0 0 var(--primary_text_color), 2px 2px 0 0 var(--primary_text_color), 3px 3px 0 0 var(--primary_text_color), 4px 4px 0 0 var(--primary_text_color), 5px 5px 0 0 var(--primary_text_color), 6px 6px 0 0 var(--primary_text_color);
   color: #fff;
-  border-radius: 6px;
 }
 
 button {
+  border-style: none;
+  top: 0;
+  left: 0;
   padding: 15px 45px;
-
+  box-shadow: 1px 1px 0 0 black, 2px 2px 0 0 black, 3px 3px 0 0 black, 4px 4px 0 0 black, 5px 5px 0 0 black, 6px 6px 0 0 black;
   text-align: center;
   text-transform: uppercase;
   font-family: rodchenko;
   font-weight: 1000;
   transition: var(--transition_1s);
   color: var(--knap_valgt_farve);
-  border-radius: 4px;
-  border-style: none;
+  border-radius: 1px;
+
   display: block;
   cursor: pointer;
 }
 
 #popup {
+  box-shadow: 1px 1px 0 0 var(--secondary_text_color), 2px 2px 0 0 var(--secondary_text_color), 3px 3px 0 0 var(--secondary_text_color), 4px 4px 0 0 var(--secondary_text_color), 5px 5px 0 0 var(--secondary_text_color), 6px 6px 0 0 var(--secondary_text_color);
   display: none;
   position: fixed;
   left: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(198, 149, 149, 0.8);
   overflow: scroll;
 }
 
@@ -132,7 +139,6 @@ button {
   justify-content: center;
   flex-direction: column;
   margin: 4rem auto;
-  border-radius: 6px;
   padding: 12px;
   background-color: white;
 }
