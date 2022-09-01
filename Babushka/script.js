@@ -32,9 +32,20 @@ function visRetter() {
       klon.querySelector(".ret").textContent = ret.navn;
       klon.querySelector(".kort_beskrivelse").textContent = ret.kortbeskrivelse;
       klon.querySelector(".pris").textContent = ret.pris + " kr.";
+      klon.querySelector("article").addEventListener("click", () => visDetaljer(ret));
       main.appendChild(klon);
     }
   });
+}
+
+// Kører ovenstående funktion visRetter / Viser detaljer om en enkelt ret i popup visning
+function visDetaljer(ret) {
+  console.log(ret);
+  popup.style.display = "block";
+  document.querySelector(".popup_navn").textContent = ret.navn;
+  document.querySelector(".popimg").src = "billeder/" + ret.billednavn + "-md.jpg";
+  document.querySelector(".langbeskrivelse").textContent = ret.langbeskrivelse;
+  document.querySelector(".popup_pris").textContent = ret.pris + " kr.";
 }
 
 // Kører funktionen hentData

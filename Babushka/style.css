@@ -1,0 +1,56 @@
+img {
+  max-width: 100%;
+  border-top: 4px;
+}
+article {
+  border: solid blanchedalmond;
+  border-radius: 6px;
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 5px;
+}
+
+.valgt {
+  border: solid salmon;
+  border-radius: 6px;
+}
+
+#popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: scroll;
+}
+
+#popup article {
+  width: 80wv;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 4rem auto;
+  border-radius: 25px;
+  padding: 12px;
+  background-color: white;
+}
+
+#luk {
+  position: fixed;
+  padding: 1rem;
+  font-size: 1.7rem;
+  font-weight: bolder;
+  color: white;
+  cursor: pointer;
+}
+
+.popimg {
+  width: 50%;
+  object-fit: contain;
+  align-self: center;
+}
