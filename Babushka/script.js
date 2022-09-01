@@ -9,6 +9,8 @@ const options = {
   },
 };
 
+document.querySelector(".luk").addEventListener("click", () => (popup.style.display = "none"));
+
 // funktion der henter data ind på siden vha ovenstående
 async function hentData() {
   const respons = await fetch(url, options);
