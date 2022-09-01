@@ -140,7 +140,7 @@ button {
   flex-direction: column;
   margin: 4rem auto;
   padding: 12px;
-  background-color: white;
+  background-color: var(--primary_text_color);
 }
 
 .popup_pris {
