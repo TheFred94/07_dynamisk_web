@@ -20,7 +20,6 @@ document.querySelector(".luk").addEventListener("click", () => (popup.style.disp
 function filtrerRetter() {
   filter = this.dataset.kategori;
   document.querySelector(".valgt").classList.remove("valgt");
-  header.textContent = this.textContent;
   this.classList.add("valgt");
   visRetter();
 }

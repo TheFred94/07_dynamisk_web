@@ -1,20 +1,113 @@
-img {
-  max-width: 100%;
-  border-top: 4px;
+html {
+  --primary_text_color: #e8e8e8;
+  --secondary_text_color: #454545;
+  --h2_size: 2rem;
+  --h3_size: 1.5rem;
+  --knap_valgt_farve: black;
 }
+
+main {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+h1 {
+  font-family: rodchenko;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  color: var(--primary_text_color);
+}
+h2 {
+  font-family: rodchenko;
+  color: var(--primary_text_color);
+  font-size: var(--h2_size);
+  margin: 0;
+  padding-block-start: 0.5rem;
+}
+h3 {
+  font-size: var(--h3_size);
+  font-family: rodchenko;
+  color: var(--primary_text_color);
+}
+p {
+  font-family: rodchenko;
+  color: var(--primary_text_color);
+}
+.pris {
+  font-family: rodchenko;
+  text-decoration: underline;
+  color: var(--primary_text_color);
+  font-size: 3rem;
+}
+
+#loopview_img {
+  max-width: 100%;
+  object-fit: fill;
+  transition: transform 0.5s ease;
+}
+
+article:hover #loopview_img {
+  transform: scale(1.1);
+}
+
+.overflow {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.bestil {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+
 article {
-  border: solid blanchedalmond;
-  border-radius: 6px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  background-color: rgba(0, 0, 0, 0.187);
+  padding-inline: 1rem;
+  padding-block-start: 1rem;
+  border-radius: 2px;
+  cursor: pointer;
+}
+body {
+  background: rgba(255, 0, 0, 0.76);
 }
 main {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 5px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  margin-block: 2rem;
 }
 
 .valgt {
-  border: solid salmon;
+  background-color: var(--knap_valgt_farve);
+  color: #fff;
   border-radius: 6px;
+}
+
+button {
+  padding: 15px 45px;
+
+  text-align: center;
+  text-transform: uppercase;
+  font-family: rodchenko;
+  font-weight: 1000;
+  transition: var(--transition_1s);
+  color: var(--knap_valgt_farve);
+  border-radius: 4px;
+  border-style: none;
+  display: block;
+  cursor: pointer;
 }
 
 #popup {
@@ -29,15 +122,29 @@ main {
 }
 
 #popup article {
-  width: 80wv;
+  width: 50vw;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   margin: 4rem auto;
-  border-radius: 25px;
+  border-radius: 6px;
   padding: 12px;
   background-color: white;
+}
+
+.popup_pris {
+  color: var(--secondary_text_color);
+  font-size: 3rem;
+}
+
+.langbeskrivelse {
+  color: var(--secondary_text_color);
+}
+
+.popup_navn {
+  color: var(--secondary_text_color);
+  font-size: 4rem;
 }
 
 #luk {
@@ -50,7 +157,32 @@ main {
 }
 
 .popimg {
-  width: 50%;
+  width: 100%;
   object-fit: contain;
   align-self: center;
+  aspect-ratio: 16/9;
+  border-radius: 3px;
+}
+
+button:hover {
+  background: Black;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+  }
+  #popup article {
+    width: 90vw;
+  }
+  button {
+    margin-inline: 3px;
+  }
+}
+nav {
+  overflow: scroll;
 }
