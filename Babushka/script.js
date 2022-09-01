@@ -27,7 +27,7 @@ function visRetter() {
   retter.forEach((ret) => {
     if (filter == ret.drikkevarer || filter == "alle") {
       const klon = template.cloneNode(true);
-      klon.querySelector(".billede").src = "medium/" + ret.billede;
+      klon.querySelector(".billede").src = "billeder/" + ret.billednavn + "-md.jpg";
       klon.querySelector(".ret").textContent = ret.navn;
       main.appendChild(klon);
     }
