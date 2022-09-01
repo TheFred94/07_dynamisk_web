@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.typekit.net/kkj6rcl.css">
+    <link rel="stylesheet" href="style.css" />
+    <title>Babushka</title>
+  </head>
+  <body>
+    <header><h1>babushka</h1></header>
+    <nav>
+        <button data-kategori="alle" class="valgt">Alle</button>
+        <button data-kategori="drikkevarer">Drikkevarer</button>
+        <button data-kategori="hovedretter">Hovedretter</button>
+        <button data-kategori="sideorders">Sideorders</button>
+    </nav>
+    <main></main>
+    <template>
+        <article>
+            <div class="overflow"><img id="loopview_img" src="" alt="" class="billede" /></div>
+                <h3 class="ret"></h3>
+                <p class="kort_beskrivelse"></p>
+            <div class="bestil">
+                <p class="pris"></p>
+                <button>Bestil</button>
+            </div>        
+        </article>
+    </template>
+    <section id="popup" class="luk">
+        <article class="popup">
+            <h2 class="popup_navn"></h2>
+            <img class="popimg" src="" alt=""/>
+            <p class="langbeskrivelse"></p>
+            <div class="bestil">
+                <p class="popup_pris"></p>
+            </div>    
+        </article>
+    </section>
+    <script src="script.js"></script>
+    </script>
+  </body>
+</html>

@@ -43,7 +43,7 @@ function visRetter() {
   retter.forEach((ret) => {
     if (filter == ret.kategori || filter == "alle") {
       const klon = template.cloneNode(true);
-      klon.querySelector(".billede").src = "billeder/" + ret.billednavn + "-md.jpg";
+      klon.querySelector(".billede").src = "../billeder/" + ret.billednavn + "-md.jpg";
       klon.querySelector(".ret").textContent = ret.navn;
       klon.querySelector(".kort_beskrivelse").textContent = ret.kortbeskrivelse;
       klon.querySelector(".pris").textContent = ret.pris + " kr.";
@@ -58,7 +58,7 @@ function visDetaljer(ret) {
   console.log(ret);
   popup.style.display = "block";
   document.querySelector(".popup_navn").textContent = ret.navn;
-  document.querySelector(".popimg").src = "billeder/" + ret.billednavn + "-md.jpg";
+  document.querySelector(".popimg").src = "../billeder/" + ret.billednavn + "-md.jpg";
   document.querySelector(".langbeskrivelse").textContent = ret.langbeskrivelse;
   document.querySelector(".popup_pris").textContent = ret.pris + " kr.";
 }
