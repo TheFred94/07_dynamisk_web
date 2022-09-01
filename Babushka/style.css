@@ -146,6 +146,7 @@ button {
 .popup_pris {
   color: var(--secondary_text_color);
   font-size: 3rem;
+  text-decoration: underline;
 }
 
 .langbeskrivelse {
@@ -156,6 +157,8 @@ button {
 .popup_navn {
   color: var(--secondary_text_color);
   font-size: 4rem;
+  text-decoration: underline;
+  padding-block-end: 2rem;
 }
 
 #luk {
