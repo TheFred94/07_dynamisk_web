@@ -1,5 +1,6 @@
 let retter;
 let filter = "alle";
+const header = document.querySelector("h1");
 
 // URL og api nøgle til restdb data
 const url = "https://babushka-dd8a.restdb.io/rest/menu";
@@ -9,7 +10,22 @@ const options = {
   },
 };
 
+// Filter const der tager fat i nav og sætter click eventlistener på nav
+const filterBtn = document.querySelectorAll("nav button");
+filterBtn.forEach((button) => button.addEventListener("click", filtrerRetter));
+
+// tager fat i class=luk i DOM og giver click eventlistener som lukker vinduet
 document.querySelector(".luk").addEventListener("click", () => (popup.style.display = "none"));
+
+function filtrerRetter() {
+  filter = this.dataset.kategori;
+  document.querySelector(".valgt").classList.remove("valgt");
+  header.textContent = this.textContent;
+  this.classList.add("valgt");
+  visRetter();
+}
+// Tager fat i main fra DOM
+const main = document.querySelector("main");
 
 // funktion der henter data ind på siden vha ovenstående
 async function hentData() {
@@ -18,8 +34,6 @@ async function hentData() {
   console.log("Menu", retter);
   visRetter();
 }
-// Tager fat i main fra DOM
-const main = document.querySelector("main");
 
 // Kører funktionen visRetter fra ovenstående hentData funktion
 function visRetter() {
@@ -28,7 +42,7 @@ function visRetter() {
   main.textContent = "";
   //   Loop gennem json
   retter.forEach((ret) => {
-    if (filter == ret.drikkevarer || filter == "alle") {
+    if (filter == ret.kategori || filter == "alle") {
       const klon = template.cloneNode(true);
       klon.querySelector(".billede").src = "billeder/" + ret.billednavn + "-md.jpg";
       klon.querySelector(".ret").textContent = ret.navn;
