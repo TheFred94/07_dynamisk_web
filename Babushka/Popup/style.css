@@ -11,6 +11,10 @@ main {
   margin: 0 auto;
   max-width: 1200px;
 }
+nav {
+  margin: 0 auto;
+  max-width: 1200px;
+}
 
 h1 {
   font-family: rodchenko;
@@ -50,8 +54,9 @@ p {
   transition: transform 0.5s ease;
 }
 
-article:hover #loopview_img {
-  transform: scale(1.1);
+article:hover {
+  box-shadow: 1px 1px 0 0 black, 2px 2px 0 0 black, 3px 3px 0 0 black, 4px 4px 0 0 black, 5px 5px 0 0 black, 6px 6px 0 0 black;
+  transform: translate(-7px, -7px);
 }
 
 .overflow {
@@ -67,8 +72,8 @@ article:hover #loopview_img {
 }
 
 article {
-  box-shadow: 5px 5px;
-  box-shadow: 1px 1px 0 0 black, 2px 2px 0 0 black, 3px 3px 0 0 black, 4px 4px 0 0 black, 5px 5px 0 0 black, 6px 6px 0 0 black;
+  transition: all 0.15s linear 0s;
+  box-shadow: 1px 1px 0 0 black, 2px 2px 0 0 black, 3px 3px 0 0 black, 4px 4px 0 0 black;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -97,16 +102,18 @@ nav {
 
 .valgt {
   background-color: var(--knap_valgt_farve);
-  box-shadow: 1px 1px 0 0 var(--primary_text_color), 2px 2px 0 0 var(--primary_text_color), 3px 3px 0 0 var(--primary_text_color), 4px 4px 0 0 var(--primary_text_color), 5px 5px 0 0 var(--primary_text_color), 6px 6px 0 0 var(--primary_text_color);
+  box-shadow: 1px 1px 0 0 var(--primary_text_color), 2px 2px 0 0 var(--primary_text_color), 3px 3px 0 0 var(--primary_text_color), 4px 4px 0 0 var(--primary_text_color), 5px 5px 0 0 var(--primary_text_color), 6px 6px 0 0 var(--primary_text_color), 7px 7px 0 0 var(--primary_text_color), 8px 8px 0 0 var(--primary_text_color), 9px 9px 0 0 var(--primary_text_color), 10px 10px 0 0 var(--primary_text_color), 11px 11px 0 0 var(--primary_text_color), 12px 12px 0 0 var(--primary_text_color);
   color: #fff;
+  transform: translate(-7px, -7px);
 }
 
 button {
+  transition: all 0.15s linear 0s;
   border-style: none;
   top: 0;
   left: 0;
   padding: 15px 45px;
-  box-shadow: 1px 1px 0 0 black, 2px 2px 0 0 black, 3px 3px 0 0 black, 4px 4px 0 0 black, 5px 5px 0 0 black, 6px 6px 0 0 black;
+  box-shadow: 1px 1px 0 0 black, 2px 2px 0 0 black, 3px 3px 0 0 black, 4px 4px 0 0 black;
   text-align: center;
   text-transform: uppercase;
   font-family: rodchenko;
@@ -114,9 +121,14 @@ button {
   transition: var(--transition_1s);
   color: var(--knap_valgt_farve);
   border-radius: 1px;
-
   display: block;
   cursor: pointer;
+}
+
+button:hover {
+  transition: all 0.15s linear 0s;
+  box-shadow: 1px 1px 0 0 var(--primary_text_color), 2px 2px 0 0 var(--primary_text_color), 3px 3px 0 0 var(--primary_text_color), 4px 4px 0 0 var(--primary_text_color), 5px 5px 0 0 var(--primary_text_color), 6px 6px 0 0 var(--primary_text_color), 7px 7px 0 0 var(--primary_text_color), 8px 8px 0 0 var(--primary_text_color), 9px 9px 0 0 var(--primary_text_color), 10px 10px 0 0 var(--primary_text_color), 11px 11px 0 0 var(--primary_text_color), 12px 12px 0 0 var(--primary_text_color);
+  transform: translate(-7px, -7px);
 }
 
 #popup {
